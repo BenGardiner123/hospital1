@@ -1,0 +1,97 @@
+<div class="container">
+    <div class="success" *ngIf="success">
+        <div></div>
+        <div class="AlertContainer">
+            <img class="AlertIcon" src="../../../assets/Images/checkmark.png">
+        </div>
+        <div>
+            <h3>Success</h3>
+            <h5>Successfully added a patient!</h5>
+        </div>  
+    </div>
+    <div class="fail" *ngIf="fail">
+        <div></div>
+        <div class="AlertContainer">
+            <img class="AlertIcon" src="../../../assets/Images/Exclamation1.png">
+        </div>
+        <div>
+            <h3>Unsuccesful</h3>
+            <h5>Please check the highlighted fields.</h5>
+        </div>  
+    </div>
+    <div class="heading"><b>Add Staff</b></div>
+    <div class="contents flex">
+        <div class="patient-information">
+            <form [formGroup]="staffForm" (ngSubmit)="onSubmit()">
+                <div>
+                    <label>Staff ID</label>
+                    <input type="number" formControlName="staffID">
+                </div>
+                <div>
+                    <label>Given Name</label>
+                    <input type="text" formControlName="givenName">
+                </div>
+                <div>
+                    <label>Family Name</label>
+                    <input type="text" formControlName="familyName">
+                </div>
+                <div>
+                    <label>Password</label>
+                    <input type="text" formControlName="password">
+                </div>
+                <div>
+                    <label>Role ID</label>
+                    <input type="number" formControlName="roleID">
+                </div>
+            </form>
+        </div>
+
+
+        <div class="categories-measurements">
+            <div class="flex">
+                <div class="categories">
+                    <div class="heading-2">Categories</div>
+                    <div class="outlined">
+                        <div>
+                            <input type="checkbox">
+                            Indwelling Plural Catheter
+                        </div>
+                        <div>
+                            <input type="checkbox">
+                            Asthma
+                        </div>
+                    </div>
+
+                </div>
+                <div class="measurements">
+                    <div class="heading-2">Permissions</div>
+                    <div class="outlined">
+                        <div class="group-divide">
+                            <b>Indwelling Plural Catheter</b>
+                            <div>
+                                <input type="checkbox">
+                                Read
+                            </div>
+                            <div>
+                                <input type="checkbox">
+                                Write
+                            </div>
+                        </div>
+                        <div class="group-divide">
+                            <b>Asthma</b>
+                            <div>
+                                <input type="checkbox">
+                                Read
+                            </div>
+                            <div>
+                                <input type="checkbox">
+                                Write
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <button class="pointer" type="submit" (click)="onSubmit()">Add Patient</button>
+</div>

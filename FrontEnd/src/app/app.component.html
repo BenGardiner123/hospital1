@@ -1,0 +1,26 @@
+<div class="container">
+
+  <app-nav-bar></app-nav-bar>
+    <!-- TODO find a better way to do the below. -->
+    
+   <div *ngIf="NavigationService.selectedTab === 'Alerts'">
+    Alerts Component to go here
+  </div>
+
+  <div *ngIf="NavigationService.selectedTab === 'Patient'">
+    <app-add-patient></app-add-patient>
+  </div>
+
+  <div *ngIf="NavigationService.selectedTab === 'Library'">
+    Library Component to go here
+  </div>
+
+  <div *ngIf="NavigationService.selectedTab === 'Resources'">
+    Resources Component to go here
+  </div>
+
+  <div *ngIf="NavigationService.selectedTab === 'Register Staff'">
+    <app-add-staff></app-add-staff>
+  </div> 
+  
+</div>

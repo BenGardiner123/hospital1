@@ -1,0 +1,56 @@
+<div class="NavbarContainer">
+
+    <!-- Container holding All links and logo except Logout. -->
+    <div class="LinkContainer">
+
+        <div class="Logo">
+            <a style="color: rgb(20,100,180)">Northern </a><br>
+            <a>Health</a>
+        </div>
+
+        <div class="Link" (click)="sendSelection('Alerts')" [ngStyle]="{'background-color': this.NavigationService.selectedTab === 'Alerts' ? 'white' : ''}">
+            <div class="LinkText" [ngStyle]="{'color': this.NavigationService.selectedTab === 'Alerts' ? 'grey' : ''}">
+                Alerts
+            </div>
+            <div class="AlertContainer">
+                <img class="AlertIcon" src="../../../assets/Images/Exclamation1.png">
+                <div class="AlertNumber">
+                    9
+                </div>
+            </div>
+        </div>
+
+        <div class="Link" (click)="sendSelection('Patient')" [ngStyle]="{'background-color': this.NavigationService.selectedTab === 'Patient' ? 'white' : ''}">
+            <div class="LinkText" [ngStyle]="{'color': this.NavigationService.selectedTab === 'Patient' ? 'grey' : ''}">
+                Patient
+            </div>
+        </div>
+
+        <div class="Link" (click)="sendSelection('Library')" [ngStyle]="{'background-color': this.NavigationService.selectedTab === 'Library' ? 'white' : ''}">
+            <div class="LinkText" [ngStyle]="{'color': this.NavigationService.selectedTab === 'Library' ? 'grey' : ''}">
+                Library
+            </div>
+        </div>
+
+        <div class="Link" (click)="sendSelection('Resources')" [ngStyle]="{'background-color': this.NavigationService.selectedTab === 'Resources' ? 'white' : ''}">
+            <div class="LinkText" [ngStyle]="{'color': this.NavigationService.selectedTab === 'Resources' ? 'grey' : ''}">
+                Resources
+            </div>
+        </div>
+
+        <div class="Link" (click)="sendSelection('Register Staff')" [ngStyle]="{'background-color': this.NavigationService.selectedTab === 'Register Staff' ? 'white' : ''}">
+            <div class="LinkText" [ngStyle]="{'color': this.NavigationService.selectedTab === 'Register Staff' ? 'grey' : ''}">
+                Register Staff
+            </div>
+        </div>
+
+    </div>
+
+
+    <div class="Link">
+        <div class="LinkText">
+            Logout
+        </div>
+    </div>
+
+</div>
